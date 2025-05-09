@@ -1,6 +1,8 @@
+let eyeicon = document.getElementById("eyeicon");
+let password = document.getElementById("password"); 
+
 document.getElementById("loginForm").addEventListener("submit", function (e) {
-    
-    
+    // Validación de credeciales 
     const mail = document.getElementById("mail").value;
     const password = document.getElementById("password").value;
     const errorMsg =  document.getElementById("errorMsg");   
@@ -31,11 +33,19 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         e.preventDefault(); 
         
     }
-
-
     // funcionamiento de validacion de contraseña correcto
     // numero de caracteres correcto
 });
-
-
 document.getElementById("mail").focus();
+
+// Ocultar contraseña 
+
+    eyeicon.onclick = function(){
+        if(password.type == "password"){
+            password.type = "text";
+            eyeicon.src = "img/eye-open.png"
+        } else {
+            password.type = "password";
+            eyeicon.src = "img/eye-closed.png"
+        }
+    }

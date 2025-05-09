@@ -19,26 +19,30 @@ body {
     flex-direction: column;
     margin-top: -20px; /* borrar?????? */
     margin-bottom: 10px; 
-    position: inherit;
+    position: absolute;
     margin-top: -20px;
+    padding: inherit;
+    height: 100vh;
 }
 
 .form-container {
-    height: auto;
-    width: 400px;
-    height: 50vh;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* overflow: hidden; */
+    width: 400px;
+    height: 50vh;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 1em;
-    transition: 0.3s;
-    max-height: 100vh;
-    margin-top: 0;
+    padding: 5%;
+    margin: 0;
     margin-top: -100px;
-    
+    position: relative;
+}
+
+.form-container img{
+    width: 20px;
+    cursor: pointer;
 }
 
 .btn1 {
@@ -50,18 +54,48 @@ body {
     margin-top: 5px;
 }
 
-#mail, #password {
-    border: 2px solid grey;
+.mail-container {
+    width: 80%; /* Alineado con el ancho del input */
+    margin: 10px auto 15px;
+}
+
+.mail-container input {
+    width: 80%;
+    border: 0;
+    outline: 0;
     box-shadow: 0 0 5px hsl(0, 1%, 71%);
-    border-radius: 20px;
-    margin: 10px;
-    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.password-container {
+    width: 80%; /* Alineado con el ancho del input */
+    margin: 10px auto 15px;
+}
+
+.password-container input {
+    width: 80%;
+    padding-right: 30px; /* Espacio para el ícono */
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 5px hsl(0, 1%, 71%);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.password-container img {
+    position: absolute;
+    right: 15%;
+    top: 59.5%;
+    transform: translateY(-50%);
+    width: 20px;
+    cursor: pointer;
 }
 
 #errorMsg {
     margin-bottom: 16px;
     font-weight: bold;
-  }
+}
 
 @media screen and (max-width: 768rem) {
     #loginForm{
