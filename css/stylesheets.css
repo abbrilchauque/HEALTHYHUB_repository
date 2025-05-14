@@ -2,7 +2,7 @@ body {
     background-color: #A5DD9B;
     padding: 2%;
     display: flex;
-    height: 100vh;
+    height: 800px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -60,6 +60,18 @@ body {
     margin-top: 5px;
 }
 
+.btn2 {
+    width: 7em;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #7d8e70;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+}
+
+
 #forgotPassword {
     background: none;
   border: none;
@@ -93,7 +105,7 @@ body {
 
 .password-container input {
     width: 80%;
-    padding-right: 30px; /* Espacio para el ícono */
+    padding-right: 35px; /* Espacio para el ícono */
     border: 0;
     outline: 0;
     box-shadow: 0 0 5px hsl(0, 1%, 71%);
@@ -102,13 +114,26 @@ body {
     box-sizing: border-box;
 }
 
-.password-container img {
+/* .password-container img {
     position: absolute;
     top: 60%;
-    right: 20px;
+    right: 30px;
     transform: translateY(-50%);
     cursor: pointer;
     pointer-events: auto;
+    width: 15px;
+} */
+
+.password-container img {
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
+    margin-left: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    width: 20px;
+
 }
 
 #errorMsg {
@@ -138,8 +163,9 @@ body {
     }
 
     .password-container img {
+        position: absolute;
         right: 10px;
-        top: 67%;
+        top: 70%;
         transform: translateY(-50%);
     }
 

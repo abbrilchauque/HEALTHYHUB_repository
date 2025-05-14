@@ -80,4 +80,9 @@ document.getElementById("mail").focus();
         }
     }
 
-// validacion de contraseña
+// Olvidaste tu contraseña
+
+document.getElementById("forgotPassword").addEventListener("click", function (e) {
+    e.preventDefault(); // Evita que se envíe el formulario
+    alert("Por favor contacta al administrador del sistema para recuperar tu contraseña.");
+});
