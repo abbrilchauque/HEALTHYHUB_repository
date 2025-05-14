@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #A5DD9B;
     padding: 2%;
     display: flex;
     height: 100vh;
@@ -23,6 +23,7 @@ body {
     margin-top: -20px;
     padding: inherit;
     height: 100vh;
+    
 }
 
 .form-container {
@@ -38,6 +39,7 @@ body {
     margin: 0;
     margin-top: -100px;
     position: relative;
+    background-color: white;
 }
 
 .form-container img{
@@ -45,13 +47,28 @@ body {
     cursor: pointer;
 }
 
+/* botones */
+
 .btn1 {
     width: 10em;
-    border: 2px solid black;
+    border: none;
     border-radius: 20px;
-    background-color: transparent;
+    padding: 5px 10px;
+    background-color: #597445;
     font-weight: bold;
+    color: white;
     margin-top: 5px;
+}
+
+#forgotPassword {
+    background: none;
+  border: none;
+  color: #000000; 
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0;
+  font-family: inherit;
 }
 
 .mail-container {
@@ -71,6 +88,7 @@ body {
 .password-container {
     width: 80%; /* Alineado con el ancho del input */
     margin: 10px auto 15px;
+    position: relative;
 }
 
 .password-container input {
@@ -81,15 +99,16 @@ body {
     box-shadow: 0 0 5px hsl(0, 1%, 71%);
     border-radius: 5px;
     padding: 5px 10px;
+    box-sizing: border-box;
 }
 
 .password-container img {
     position: absolute;
-    right: 15%;
-    top: 59.5%;
+    top: 60%;
+    right: 20px;
     transform: translateY(-50%);
-    width: 20px;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 #errorMsg {
@@ -97,12 +116,34 @@ body {
     font-weight: bold;
 }
 
-@media screen and (max-width: 768rem) {
-    #loginForm{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow-y: hidden;
+@media screen and (max-width: 768px) {
+    #loginForm {
+        height: auto;
+        position: static;
+        margin-top: 0;
+        padding: 5%;
+    }
+
+    .form-container {
+        width: 90%;
+        height: auto;
+        margin-top: 0;
+        padding: 10% 5%;
+    }
+
+    .mail-container input,
+    .password-container input {
+        width: 100%;
+        padding: 5px 5px;
+    }
+
+    .password-container img {
+        right: 10px;
+        top: 67%;
+        transform: translateY(-50%);
+    }
+
+    .btn1 {
+        width: 50%;
     }
 }

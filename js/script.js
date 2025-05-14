@@ -10,8 +10,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;// Define la expresion regular ej:(usuario123@dominio.org)
 
     // Credenciales validas para ingresar a la pagina
-    const validMail = "correo@uade.com";
-    const validPassword = "Hola123";
+    const validMail = "admin@uade.com";
+    const validPassword = "admin123";
 
     // Validacion de credenciales
     if (!mailRegex.test(mail)) {
