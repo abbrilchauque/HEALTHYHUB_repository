@@ -8,22 +8,51 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const errorMsg =  document.getElementById("errorMsg");   
 
     const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;// Define la expresion regular ej:(usuario123@dominio.org)
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/; // Expresion regular para validar la contraseña
 
     // Credenciales validas para ingresar a la pagina
     const validMail = "admin@uade.com";
-    const validPassword = "admin123";
+    const validPassword = "Admin123!";
 
     // Validacion de credenciales
     if (!mailRegex.test(mail)) {
-        alert("Ingrese un mail válido");
-        // alert("Por favor ingresa un correo válido.");
+        alert("Por favor ingresa un correo válido.");
         document.getElementById("mail").focus(); // Le da el foco de vuelta al campo de imail para que el usuario lo corrija
         e.preventDefault(); // Evita que se envíe el formulario
-    } else if (password.length < 6) {
-        alert("La contraseña debe tener al menos 6 caracteres.");
+        return; 
+    } 
+    
+    if (password.length < 8) {
+        alert("La contraseña debe tener al menos 8 caracteres.");
         document.getElementById("password").focus();
         e.preventDefault();
-    } else if (mail === validMail && password=== validPassword){
+        return; 
+    } 
+
+    // Validación de la contraseña
+
+     if (!/[A-Z]/.test(password)) {
+        alert("La contraseña debe incluir al menos una letra mayúscula.");
+        document.getElementById("password").focus();
+        e.preventDefault();
+        return;
+    }
+
+    if (!/\d/.test(password)) {
+        alert("La contraseña debe incluir al menos un número.");
+        document.getElementById("password").focus();
+        e.preventDefault();
+        return;
+    }
+
+    if (!/[\W_]/.test(password)) {
+        alert("La contraseña debe incluir al menos un símbolo (como @, #, !, etc.).");
+        document.getElementById("password").focus();
+        e.preventDefault();
+        return;
+    }
+    
+    if (mail === validMail && password=== validPassword){
         setTimeout(() => {
             window.location.href = "home.html";
         }); 
@@ -36,6 +65,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     // funcionamiento de validacion de contraseña correcto
     // numero de caracteres correcto
 });
+
 document.getElementById("mail").focus();
 
 // Ocultar contraseña 
@@ -49,3 +79,5 @@ document.getElementById("mail").focus();
             eyeicon.src = "img/eye-closed.png"
         }
     }
+
+// validacion de contraseña
