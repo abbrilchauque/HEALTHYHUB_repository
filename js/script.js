@@ -8,7 +8,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const errorMsg =  document.getElementById("errorMsg");   
 
     const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;// Define la expresion regular ej:(usuario123@dominio.org)
-    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/; // Expresion regular para validar la contraseña
 
     // Credenciales validas para ingresar a la pagina
     const validMail = "admin@uade.com";
