@@ -114,15 +114,6 @@ body {
     box-sizing: border-box;
 }
 
-/* .password-container img {
-    position: absolute;
-    top: 60%;
-    right: 30px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    pointer-events: auto;
-    width: 15px;
-} */
 
 .password-container img {
     position: static;
