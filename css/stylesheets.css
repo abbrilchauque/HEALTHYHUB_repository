@@ -58,6 +58,7 @@ body {
     font-weight: bold;
     color: white;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .btn2 {
@@ -69,6 +70,7 @@ body {
     font-weight: bold;
     color: white;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 

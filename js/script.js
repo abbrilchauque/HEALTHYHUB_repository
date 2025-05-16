@@ -85,3 +85,7 @@ document.getElementById("forgotPassword").addEventListener("click", function (e)
     e.preventDefault(); // Evita que se envíe el formulario
     alert("Por favor contacta al administrador del sistema para recuperar tu contraseña.");
 });
+
+document.querySelector('.btn2').addEventListener('click', function() {
+    window.location.href = 'registro.html'; // Cambia por la ruta que desees
+});
