@@ -1,11 +1,11 @@
-let eyeicon = document.getElementById("eyeicon");
-let password = document.getElementById("password"); 
 
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+document.getElementById("login-form").addEventListener("submit", function (e) {
     // Validación de credeciales 
     const mail = document.getElementById("mail").value;
     const password = document.getElementById("password").value;
     const errorMsg =  document.getElementById("errorMsg");   
+    
 
     const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;// Define la expresion regular ej:(usuario123@dominio.org)
 
@@ -63,12 +63,15 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     }
     // funcionamiento de validacion de contraseña correcto
     // numero de caracteres correcto
+    
 });
 
 document.getElementById("mail").focus();
 
-// Ocultar contraseña 
+ let eyeicon = document.getElementById("eyeicon");
+let password = document.getElementById("password");
 
+// Ocultar contraseña 
     eyeicon.onclick = function(){
         if(password.type == "password"){
             password.type = "text";
@@ -89,3 +92,18 @@ document.getElementById("forgotPassword").addEventListener("click", function (e)
 document.querySelector('.btn2').addEventListener('click', function() {
     window.location.href = 'registro.html'; // Cambia por la ruta que desees
 });
+
+// SCRIPT DE REGISTRO
+// -
+// -
+// -
+// -
+// -
+// -
+// -
+// -
+// -
+// -
+
+const signupbtn = document.querySelector("#signupbtn");
+

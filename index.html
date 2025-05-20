@@ -4,33 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthyHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/stylesheets.css">
     
 </head>
 <body>
     <main>
-        <div class="form-container">
-            <form id="loginForm">
-                <p id="errorMsg"></p>
-                <h1>Healthy Hub</h1>
+        <div class="container">
+            <div class="form-container">
+                <div class="signin-signup">
+                    <form action="#" id="login-form">
+                        <p id="errorMsg"></p>
+                        <h1 id="title">Healthy HUB</h1>
 
-                <div class="mail-container">
-                    <label for="mail">Correo electronico</label>
-                    <input type="text" id="mail" placeholder="email" required>
-                </div>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="mail" placeholder="email" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="contraseña" required>
+                            <img src="img/eye-closed.png" id="eyeicon">
+                        </div>
 
-                <div class="password-container">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="password" required>
-                    <img src="img/eye-closed.png" id="eyeicon">
+                        <input type="button" value="¿Olvidaste tu contraseña?" id="forgotPassword">
+                        <button type="submit" class="btn1">Iniciar Sesión</button>
+                        <!-- <button type="button" class="btn2">Registrarse</button> -->
+                    </form>
+
+                    <form action="#" id="registro-form">
+                        <h1 id="title">Registrarse</h1>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Nombre completo" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="text" placeholder="Fecha de nacimiento (dd/mm/aaaa)" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-venus-mars"></i>
+                            <select>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="email" placeholder="email" />
+                        </div>
+                        <div class="input-field"> 
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="contraseña" />
+                        </div>
+                        <div class="error" id="mensajeError"></div>
+                        <button type="submit" class="btn-1">Registrarse</button>
+                        <button type="button" class="btn-2">Cancelar</button>
+                    </form>
                 </div>
-                
-                <input type="button" value="¿Olvidaste tu contraseña?" id="forgotPassword">
-                <button type="submit" class="btn1">Iniciar Sesión</button>
-                <button type="button" class="btn2">Registrarse</button>
-                
-            </form>
         </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                <h3>¿Quisieras ser parte?</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum necessitatibus eaque inventore voluptatum, voluptates 
+                        fugiat consequuntur expedita sit.
+                    </p>
+                <button class="btn transparent" id="sign-up-btn">
+                    Registrarse
+                </button>
+                </div>
+                <img src="/img/login.svg" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>¿Ya tienes cuenta?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quisquam, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <img src="/img/signup.svg" class="image">
+            </div>
+        </div>
+        
         <script src="js/script.js"></script>
     </main>
 </body>

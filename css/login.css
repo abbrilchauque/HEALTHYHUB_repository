@@ -1,0 +1,168 @@
+body {
+    background-color: #A5DD9B;
+    padding: 2%;
+    display: flex;
+    height: 800px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+
+}
+
+#loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -20px; /* borrar?????? */
+    margin-bottom: 10px; 
+    position: absolute;
+    margin-top: -20px;
+    padding: inherit;
+    height: 100vh;
+    
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* overflow: hidden; */
+    width: 400px;
+    height: 50vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 5%;
+    margin: 0;
+    margin-top: -100px;
+    position: relative;
+    background-color: white;
+}
+
+.form-container img{
+    width: 20px;
+    cursor: pointer;
+}
+
+/* botones */
+
+.btn1 {
+    width: 10em;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #597445;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.btn2 {
+    width: 7em;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #7d8e70;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+#forgotPassword {
+    background: none;
+  border: none;
+  color: #000000; 
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0;
+  font-family: inherit;
+}
+
+.mail-container {
+    width: 80%; /* Alineado con el ancho del input */
+    margin: 10px auto 15px;
+}
+
+.mail-container input {
+    width: 80%;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 5px hsl(0, 1%, 71%);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.password-container {
+    width: 80%; /* Alineado con el ancho del input */
+    margin: 10px auto 15px;
+    position: relative;
+}
+
+.password-container input {
+    width: 80%;
+    padding-right: 35px; /* Espacio para el ícono */
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 5px hsl(0, 1%, 71%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+
+.password-container img {
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
+    margin-left: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    width: 20px;
+
+}
+
+#errorMsg {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    #loginForm {
+        height: auto;
+        position: static;
+        margin-top: 0;
+        padding: 5%;
+    }
+
+    .form-container {
+        width: 90%;
+        height: auto;
+        margin-top: 0;
+        padding: 10% 5%;
+    }
+
+    .mail-container input,
+    .password-container input {
+        width: 100%;
+        padding: 5px 5px;
+    }
+
+    .password-container img {
+        position: absolute;
+        right: 10px;
+        top: 70%;
+        transform: translateY(-50%);
+    }
+
+    .btn1 {
+        width: 50%;
+    }
+}

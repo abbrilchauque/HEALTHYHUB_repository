@@ -1,4 +1,4 @@
-document.getElementById("registroForm").addEventListener("submit", function(e) {
+document.getElementById("registro-form").addEventListener("submit", function(e) {
 e.preventDefault(); // Evita que se envíe el formulario
 
       const nombre = document.getElementById("nombre").value.trim();
