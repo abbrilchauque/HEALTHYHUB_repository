@@ -2,7 +2,7 @@
 
 Credenciales para inicio de sesión:
 
-El programa se podrá pobar con CUALQUIER mail y contraseña, siempre y cuando cumpla
+El programa se podrá probar con CUALQUIER mail y contraseña, siempre y cuando cumpla
 con los requisitos de:
    - Mínimo de 8 caracteres
    - Una mayúscula
