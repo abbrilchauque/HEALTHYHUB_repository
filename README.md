@@ -2,5 +2,10 @@
 
 Credenciales para inicio de sesión:
 
-Email: admin@uade.com
-Contraseña: Admin123!
+El programa se podrá probar con CUALQUIER mail y contraseña, siempre y cuando cumpla
+con los requisitos de:
+   - Mínimo de 8 caracteres
+   - Una mayúscula
+   - Un número
+   - Por lo menos un caracter especial (#, @, !, ¿, etc.)
+   - Formato para mail (nombre@dominio.com)
