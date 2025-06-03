@@ -313,6 +313,15 @@ form#registro-form{
   pointer-events: all;
 }
 
+/* MENSAJES DE ERROR */
+.error-text {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 4px;
+    margin-left: 40px; /* para que no quede encima del ícono */
+    white-space: normal;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 870px) {

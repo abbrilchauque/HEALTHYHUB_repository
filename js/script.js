@@ -4,25 +4,19 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     // Validación de credeciales 
     const mail = document.getElementById("mail").value;
     const password = document.getElementById("password").value;
-    const errorMsg =  document.getElementById("errorMsg");   
-    
 
     const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;// Define la expresion regular ej:(usuario123@dominio.org)
 
-    // Credenciales validas para ingresar a la pagina
-    // const validMail = "admin@uade.com";
-    // const validPassword = "Admin123!";
-
     // Validacion de credenciales
     if (!mailRegex.test(mail)) {
-        alert("Por favor ingresa un correo válido.");
+        errorMail.textContent = "Por favor ingresa un correo válido.";
         document.getElementById("mail").focus(); // Le da el foco de vuelta al campo de imail para que el usuario lo corrija
         e.preventDefault(); // Evita que se envíe el formulario
         return; 
     } 
     
     if (password.length < 8) {
-        alert("La contraseña debe tener al menos 8 caracteres.");
+        errorPassword.textContent = "La contraseña debe tener al menos 8 caracteres.";
         document.getElementById("password").focus();
         e.preventDefault();
         return; 
@@ -31,21 +25,21 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     // Validación de la contraseña
 
      if (!/[A-Z]/.test(password)) {
-        alert("La contraseña debe incluir al menos una letra mayúscula.");
+        errorPassword.textContent = "La contraseña debe incluir al menos una letra mayúscula.";
         document.getElementById("password").focus();
         e.preventDefault();
         return;
     }
 
     if (!/\d/.test(password)) {
-        alert("La contraseña debe incluir al menos un número.");
+        errorPassword.textContent = "La contraseña debe incluir al menos un número.";
         document.getElementById("password").focus();
         e.preventDefault();
         return;
     }
 
     if (!/[\W_]/.test(password)) {
-        alert("La contraseña debe incluir al menos un símbolo (como @, #, !, etc.).");
+        errorPassword.textContent = "La contraseña debe incluir al menos un símbolo (como @, #, !, etc.).";
         document.getElementById("password").focus();
         e.preventDefault();
         return;
@@ -134,7 +128,8 @@ loginbtn.addEventListener("click", () => {
 
 
 document.getElementById("registro-form").addEventListener("submit", function(e) {
-// e.preventDefault(); // Evita que se envíe el formulario
+e.preventDefault();
+// document.getElementById("errorNombre").textContent = "Esto es una prueba de error.";
 
       const nombre = document.getElementById("nombre").value.trim();
       const fecha = document.getElementById("fechaNacimiento").value.trim();
@@ -142,66 +137,86 @@ document.getElementById("registro-form").addEventListener("submit", function(e) 
       const mail = document.getElementById("registro-mail").value.trim();
       const contrasena = document.getElementById("registro-password").value;
       const confirmar = document.getElementById("registro-confirmarContrasena").value;
+      const errorRegistroMail = document.getElementById("errorRegistroMail");
+      const errorNombre = document.getElementById("errorNombre");
+      const errorFecha = document.getElementById("errorFecha");
+      const errorRegistroPassword = document.getElementById("errorRegistroPassword");
+      const errorConfirmarPassword = document.getElementById("errorConfirmarPassword");
+
+
 
       const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
       const mensajeError = document.getElementById("mensajeError");
-      mensajeError.textContent = ""; // Limpiar errores anteriores
-
+    //   mensajeError.textContent = ""; // Limpiar errores anteriores
+       errorRegistroMail.textContent = "";
+       errorNombre.textContent = "";
+       errorFecha.textContent = "";
+       errorRegistroPassword.textContent = "";
+       errorConfirmarPassword.textContent = "";
 
       // Validar correo electrónico
       if (!mailRegex.test(mail)) {
-       alert("Por favor ingresa un correo válido.");
+       errorRegistroMail.textContent = "Por favor ingresa un correo válido.";
+       document.getElementById("registro-mail").value = ""; 
        document.getElementById("registro-mail").focus(); // Le da el foco de vuelta al campo de imail para que el usuario lo corrija
-       e.preventDefault(); // Evita que se envíe el formulario
+
        return; 
       } 
 
       // Validar que el nombre no esté vacío
       if (nombre === "") {    
-        mensajeError.textContent = "El nombre no puede estar vacío.";
+        errorNombre.textContent = "El nombre no puede estar vacío.";
+        document.getElementById("nombre").value = ""; 
+        document.getElementById("nombre").focus(); 
         return;
     }
 
       // Validar formato de fecha (dd/mm/aaaa)
       const regexFecha = /^(\d{2})\/(\d{2})\/(\d{4})$/;
       if (!regexFecha.test(fecha)) {
-        mensajeError.textContent = "La fecha debe tener el formato dd/mm/aaaa.";
+        errorFecha.textContent = "La fecha debe ser con formato dd/mm/aaaa.";
+        document.getElementById("fechaNacimiento").value = ""; 
         return;
       }
 
-       if (password.length < 8) {
-        alert("La contraseña debe tener al menos 8 caracteres.");
+       if (contrasena.length < 8) {
+        errorRegistroPassword.textContent = "La contraseña debe tener al menos 8 caracteres.";
+        document.getElementById("registro-password").value = ""; 
         document.getElementById("registro-password").focus();
-        e.preventDefault();
+
         return; 
     } 
 
     // Validación de la contraseña
 
      if (!/[A-Z]/.test(contrasena)) {
-        alert("La contraseña debe incluir al menos una letra mayúscula.");
+        errorRegistroPassword.textContent = "La contraseña debe incluir al menos una letra mayúscula.";
+        document.getElementById("registro-password").value = "";
         document.getElementById("registro-password").focus();
-        e.preventDefault();
+
         return;
     }
 
     if (!/\d/.test(contrasena)) {
-        alert("La contraseña debe incluir al menos un número.");
+        errorRegistroPassword.textContent = "La contraseña debe incluir al menos un número.";
+        document.getElementById("registro-password").value = "";
         document.getElementById("registro-password").focus();
-        e.preventDefault();
+
         return;
     }
 
     if (!/[\W_]/.test(contrasena)) {
-        alert("La contraseña debe incluir al menos un símbolo (como @, #, !, etc.).");
+        errorRegistroPassword.textContent = "La contraseña debe incluir al menos un símbolo (como @, #, !, etc.).";
+        document.getElementById("registro-password").value = "";
         document.getElementById("registro-password").focus();
-        e.preventDefault();
         return;
     }
 
       // Validar que las contraseñas coincidan
       if (contrasena !== confirmar) {
-        mensajeError.textContent = "Las contraseñas no coinciden.";
+        errorConfirmarPassword.textContent = "Las contraseñas no coinciden.";
+        document.getElementById("registro-confirmarContrasena").value = "";
+        document.getElementById("registro-confirmarContrasena").focus();
         return;
       }
 
@@ -211,8 +226,26 @@ document.getElementById("registro-form").addEventListener("submit", function(e) 
         return;
       }
 
+
+    document.getElementById("registro-mail").addEventListener("input", function() {
+    errorRegistroMail.textContent = "";
+    });
+    document.getElementById("nombre").addEventListener("input", function() {
+        errorNombre.textContent = "";
+    });
+    document.getElementById("fechaNacimiento").addEventListener("input", function() {
+        errorFecha.textContent = "";
+    });
+    document.getElementById("registro-password").addEventListener("input", function() {
+        errorRegistroPassword.textContent = "";
+    });
+    document.getElementById("registro-confirmarContrasena").addEventListener("input", function() {
+        errorConfirmarPassword.textContent = "";
+    });
       // Si todo está bien
-      alert("Formulario enviado correctamente.");
+    alert("Formulario enviado correctamente.");
+    document.getElementById("registro-form").reset();
+    
 });
 
 // Mostrar/ocultar contraseña en registro

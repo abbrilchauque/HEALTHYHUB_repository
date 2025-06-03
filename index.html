@@ -21,11 +21,13 @@
                             <i class="fas fa-user"></i>
                             <input type="text" id="mail" placeholder="Email" required>
                         </div>
+                        <span class="error-text" id="errorMail"></span>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
                             <input type="password" id="password" placeholder="Contraseña" required>
-                            <img src="img/eye-closed.png" id="eyeicon">
+                            <img src="img/eye-closed.png" id="eyeicon"> 
                         </div>
+                        <span class="error-text" id="errorPassword"></span>
 
                         <input type="button" value="¿Olvidaste tu contraseña?" id="forgotPassword">
                         <button type="submit" id="log-in-btn">Iniciar Sesión</button>
@@ -38,10 +40,13 @@
                             <i class="fas fa-user"></i>
                             <input type="text" id="nombre" placeholder="Nombre completo" />
                         </div>
+                        <span class="error-text" id="errorNombre"></span>
                         <div class="input-field">
                             <i class="fas fa-calendar-alt"></i>
-                            <input type="text" id="fechaNacimiento" placeholder="Fecha de nacimiento (dd/mm/aaaa)" />
+                            <input type="text" id="fechaNacimiento" placeholder="Fecha (dd/mm/aaaa)" />
                         </div>
+                        <span class="error-text" id="errorFecha"></span>
+
                         <div class="input-field">
                             <i class="fas fa-venus-mars"></i>
                             <select id="genero">
@@ -50,21 +55,29 @@
                                 <option value="Masculino">Masculino</option>
                                 <option value="Prefiero no decirlo">Prefiero no decirlo</option>
                             </select>
+                            
                         </div>
+                        <span class="error-text" id="errorGenero"></span>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
                             <input type="email" id="registro-mail" placeholder="Email" />
+                            
                         </div>
+                        <span class="error-text" id="errorRegistroMail"></span>
                         <div class="input-field"> 
                             <i class="fas fa-lock"></i>
                             <input type="password" id="registro-password" placeholder="Contraseña" />
                             <img src="img/eye-closed.png" id="eyeicon-registro">
+                            
                         </div>
+                        <span class="error-text" id="errorRegistroPassword"></span>
+
                         <div class="input-field"> 
                             <i class="fas fa-lock"></i>
                             <input type="password" id="registro-confirmarContrasena" placeholder="Confirmar contraseña" />
+                            
                         </div>
-                        <div class="error" id="mensajeError"></div>
+                        <span class="error-text" id="errorConfirmarPassword"></span>
                         <button type="submit" id="register-btn">Registrarse</button>
                         <!-- <button type="button" id="cancel-btn">Cancelar</button>  -->
                     </form>
