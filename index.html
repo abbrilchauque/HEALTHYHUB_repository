@@ -114,9 +114,23 @@
                 </div>
             </div>
         </div>
-        
         <script src="js/script.js"></script>
-        
     </main>
+    <!-- Modal para Olvidé mi contraseña -->
+        <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-forgot-password">&times;</span>
+            <h2>Recuperar Contraseña</h2>
+            <p>Por favor, ingresá tu correo electrónico para recibir un enlace de recuperación.</p>
+            <form id="forgot-password-form">
+            <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="forgot-email" placeholder="Correo electrónico" required />
+            </div>
+            <span id="errorForgotEmail" class="error-text"></span>
+            <button type="submit">ENVIAR ENLACE</button>
+            </form>
+        </div>
+        </div>
 </body>
 </html>

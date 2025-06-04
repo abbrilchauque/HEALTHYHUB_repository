@@ -322,6 +322,74 @@ form#registro-form{
     white-space: normal;
 }
 
+
+/* MODALS */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 445px;
+  position: relative;
+}
+
+#forgot-password-modal .input-field input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing:border-box;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  width: 70%;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  background-color: #9EBC8A;
+  
+  cursor: pointer;
+  border-radius: 49px;
+}
+
+.modal-content button:hover {
+  background-color: #7a9a6c;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 870px) {
@@ -427,6 +495,8 @@ form#registro-form{
     transform: translate(-50%, 0);
   }
 }
+
+
 
 @media (max-width: 768px){
    form {

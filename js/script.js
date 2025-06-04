@@ -82,10 +82,10 @@ let password = document.getElementById("password");
 
 // Olvidaste tu contraseña
 
-document.getElementById("forgotPassword").addEventListener("click", function (e) {
-    e.preventDefault(); // Evita que se envíe el formulario
-    alert("Por favor contacta al administrador del sistema para recuperar tu contraseña.");
-});
+// document.getElementById("forgotPassword").addEventListener("click", function (e) {
+//     e.preventDefault(); // Evita que se envíe el formulario
+//     alert("Por favor contacta al administrador del sistema para recuperar tu contraseña.");
+// });
 
 // document.querySelector('.sign-up-button').addEventListener('click', function() {
 //     window.location.href = 'registro.html'; // Cambia por la ruta que desees
@@ -263,3 +263,44 @@ if (eyeiconRegistro && passwordRegistro) {
         }
     }
 }
+
+// Mostrar modal
+document.addEventListener("DOMContentLoaded", function () {
+  const forgotPasswordBtn = document.getElementById("forgotPassword");
+  const modal = document.getElementById("forgot-password-modal");
+  const closeBtn = document.getElementById("close-forgot-password");
+
+  // Abrir el modal
+  forgotPasswordBtn.addEventListener("click", function () {
+    modal.style.display = "block";
+  });
+
+  // Cerrar al hacer clic en la X
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Cerrar al hacer clic fuera del contenido
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+
+// Validación básica (opcional)
+document.getElementById("forgot-password-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("forgot-email").value.trim();
+  const errorSpan = document.getElementById("errorForgotEmail");
+  errorSpan.textContent = "";
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorSpan.textContent = "Por favor ingresá un correo válido.";
+    return;
+  }
+
+  alert("Se envió el enlace de recuperación a " + email);
+  document.getElementById("forgot-password-modal").style.display = "none";
+});
