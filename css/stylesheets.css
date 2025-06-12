@@ -319,6 +319,7 @@ form#registro-form{
     font-size: 0.85em;
     margin-top: 4px;
     margin-left: 40px; /* para que no quede encima del ícono */
+    margin-bottom: 10px;
     white-space: normal;
 }
 

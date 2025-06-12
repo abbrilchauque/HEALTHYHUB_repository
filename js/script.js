@@ -159,7 +159,6 @@ e.preventDefault();
        errorRegistroMail.textContent = "Por favor ingresa un correo válido.";
        document.getElementById("registro-mail").value = ""; 
        document.getElementById("registro-mail").focus(); // Le da el foco de vuelta al campo de imail para que el usuario lo corrija
-
        return; 
       } 
 
@@ -169,7 +168,7 @@ e.preventDefault();
         document.getElementById("nombre").value = ""; 
         document.getElementById("nombre").focus(); 
         return;
-    }
+      }
 
       // Validar formato de fecha (dd/mm/aaaa)
       const regexFecha = /^(\d{2})\/(\d{2})\/(\d{4})$/;

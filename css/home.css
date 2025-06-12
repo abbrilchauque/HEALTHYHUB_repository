@@ -11,8 +11,8 @@
     }
 
     header {
-      background-color: #A5DD9B;
-      color: white;
+      background-color: #7a9a6c;
+      color: black;
       padding: 20px;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -24,11 +24,15 @@
 
     nav {
       margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Permite que pasen a otra línea si no entran */
+      gap: 10px;
     }
 
     nav a {
       margin: 0 15px;
-      color: white;
+      color: #1f251d;
       text-decoration: none;
       font-weight: bold;
     }
@@ -68,7 +72,7 @@
       margin-top: 40px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
       .main {
         flex-direction: row;
         justify-content: center;
@@ -78,4 +82,9 @@
       .main img {
         margin-right: 40px;
       }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
     }
